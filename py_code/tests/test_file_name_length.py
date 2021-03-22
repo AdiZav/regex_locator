@@ -33,9 +33,9 @@ def create_test_file(file_info):
     return count
 
 
-@pytest.fixture(params=[(''.join(random.choice(NAME_CHARS) for i in range(8))),
-                        (''.join(random.choice(NAME_CHARS) for i in range(20))),
-                        ''.join(random.choice(NAME_CHARS) for i in range(30))])
+@pytest.fixture(params=[(''.join(random.choice(NAME_CHARS) for i in range(8)),),
+                        (''.join(random.choice(NAME_CHARS) for i in range(20)),),
+                        (''.join(random.choice(NAME_CHARS) for i in range(30)),)])
 def file_info(request):
     return request.param
 
