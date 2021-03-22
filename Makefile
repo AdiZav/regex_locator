@@ -1,3 +1,5 @@
+current_dir := $(shell pwd)
+
 .PHONY: help build run all
 
 help:
@@ -10,13 +12,22 @@ help:
 
 .DEFAULT_GOAL := all
 
-build:
-	    @docker build -t regex_locator-img .
+one_test-build:
+		@docker build -f OneTimeTest_Dockerfile -t regex_locator-one_test-img .
 
-run:
-	    docker run -it --name regex_locator-test_cont regex_locator-img
-	    docker cp regex_locator-test_cont:/regex_locator/test.log .
+cont_test-build:
+	    @docker build -f Dockerfile -t regex_locator-cont_test-img .
+
+one_test-run:
+		
+	    docker run -it --name regex_locator-one_test regex_locator-one_test-img
+	    docker cp regex_locator-one_test:/regex_locator/test.log .
+
+cont_test-run:
+		- docker container stop regex_locator-cont_test
+		- docker container rm regex_locator-cont_test
+		docker run -it --name regex_locator-cont_test -v ${current_dir}/py_code/:/regex_locator/ regex_locator-cont_test-img /bin/bash
 
 
 
-all: build run
+all: cont_test-build cont_test-run
