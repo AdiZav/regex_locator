@@ -26,7 +26,7 @@ one_test-run:
 cont_test-run:
 		- docker container stop regex_locator-cont_test
 		- docker container rm regex_locator-cont_test
-		docker run -it --name regex_locator-cont_test -v ${current_dir}/py_code/:/regex_locator/ regex_locator-cont_test-img /bin/bash
+		docker run -it --name regex_locator-cont_test -v ${current_dir}/py_code/:/regex_locator/ regex_locator-cont_test-img python ./run_tests.py
 
 
 
