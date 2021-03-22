@@ -1,0 +1,32 @@
+Folder PATH listing for volume DATA
+Volume serial number is 8CEA-2E9A
+E:.
+|   Dockerfile
+|   Makefile
+|   output.doc
+|   README.md
+|   requirements.txt
+|   test.log
+|   
++---.idea
+|       encodings.xml
+|       misc.xml
+|       modules.xml
+|       regex_locator-main.iml
+|       workspace.xml
+|       
+\---regex_locator
+    |   main.py
+    |   run_tests.py
+    |   __init__.py
+    |   
+    \---tests
+        |   test_cli_tests.py
+        |   test_file_amount.py
+        |   test_file_size.py
+        |   __init__.py
+        |   
+        \---test_files
+                basic.txt
+                __init__.py
+                

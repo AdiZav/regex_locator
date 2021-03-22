@@ -1,0 +1,16 @@
+INFO:root:start
+INFO:root:22/03/2021 11:39:23 test_normal
+INFO:root:22/03/2021 11:39:23 test_missing_exp
+ERROR:root:22/03/2021 11:39:23 test_missing_exp
+INFO:root:22/03/2021 11:39:23 test_optional_args
+INFO:root:22/03/2021 11:39:23 test_missing_file
+ERROR:root:22/03/2021 11:39:23 test_missing_file
+INFO:root:22/03/2021 11:39:23 test_no_file
+ERROR:root:22/03/2021 11:39:23 test_no_file
+INFO:root:22/03/2021 11:39:23 test_file_amount.py
+INFO:root:22/03/2021 11:39:23 test_file_amount.py
+INFO:root:22/03/2021 11:39:23 test_file_amount.py
+INFO:root:22/03/2021 11:39:23 test_file_size.py
+INFO:root:22/03/2021 11:39:23 test_file_size.py
+INFO:root:22/03/2021 11:39:23 test_file_size.py
+INFO:root:done
